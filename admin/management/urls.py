@@ -25,4 +25,8 @@ urlpatterns = [
     path('migrate_osfmetrics_fix_6to8', views.MigrateOsfmetricsFix6to8.as_view(), name='migrate_osfmetrics_fix_6to8'),
     re_path(r'^migrate_funder_names_to_ror', views.MigrateFunderNamesToRor.as_view(),
             name='migrate_funder_names_to_ror'),
+    re_path(r'^reject_pending_collection_submissions', views.RejectPendingCollectionSubmissions.as_view(),
+            name='reject_pending_collection_submissions'),
+    re_path(r'^reject_pending_node_requests', views.RejectPendingNodeRequests.as_view(),
+            name='reject_pending_node_requests'),
 ]
